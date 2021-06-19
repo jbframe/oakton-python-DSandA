@@ -11,6 +11,7 @@ custKilowattHoursUsed = 0.0
 custAmountPastDue = 0.0
 custTotalAmountDue = 0.0
 custPenaltyCharge = 0.0
+custSurcharge = 0.0
 
 # ---------------------------------------------------
 # helper function to gather customer data
@@ -26,9 +27,9 @@ def getCustomerData() :
 # helper function to calculate customer bill
 def calculateElecticBill() :
   # define and initialize variables
-  global custKilowattHoursUsed, custAmountPastDue, custPenaltyCharge
+  global custKilowattHoursUsed, custAmountPastDue, custPenaltyCharge, custSurcharge
   penaltyCharge = 0.0; currentCharge = 0.0
-  amt = currentCharge + custAmountPastDue + custPenaltyCharge
+  amt = currentCharge + custAmountPastDue + custPenaltyCharge + custSurcharge
   # define the rates and charges
   penaltyPcentage = 2.5
   electricityVariableRates = [0.1, 0.09, 0.08, 0.06]
@@ -55,10 +56,14 @@ def calculateElecticBill() :
   # calculate penalty
   custPenaltyCharge = custAmountPastDue * penaltyPcentage / 100
 
-  # calculate total amount
-  amt = currentCharge + custAmountPastDue + custPenaltyCharge
+  # calculate surcharge
+  if currentCharge > 300:
+    custSurcharge = currentCharge * 12 / 100
 
+  # calculate total amount
+  amt = currentCharge + custAmountPastDue + custPenaltyCharge + custSurcharge
   return amt
+
 
 # ---------------------------------------------------
 print ()
@@ -75,5 +80,6 @@ print ("Customer Name\t", custName)
 print ("Customer Address\t", custAddress)
 print ("Amount Past Due\t", format(custAmountPastDue, "0.2f"))
 print ("Penalty\t", format(custPenaltyCharge, "0.2f"))
+print ("Surcharge\t", format(custSurcharge, "0.2f"))
 print ("Total Amount Due\t", format(custTotalAmountDue, "0.2f"))
 print ("\n****************\n")
