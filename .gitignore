@@ -1,6 +1,7 @@
 # Course content
 content/
-hw/
+hw/hw docx/
+Labs/Labs docx/
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
