@@ -38,5 +38,5 @@ bestPossibleGPA = (4 * creditsCurrent + (creditsEarned * currentGPA)) / totalHou
 
 # ---------------------------------------------------#
 print ("----- OUTPUTTING Data -----")
-print (f"Required GPA for all remaining {creditsCurrent} credit's:", format(requiredGPA, "0.2f"))
-print (f"Best Possible GPA (assuming Straight A's) for all remaining {creditsCurrent} credit's:", format(bestPossibleGPA, "0.3f"), "\n")
+print (f"To attain the desired GPA of {targetGPA}, you will require {creditsCurrent} credit hours with a GPA of", format(requiredGPA, "0.2f"))
+print (f"The best Possible GPA (assuming Straight A's) for all remaining {creditsCurrent} credit's is", format(bestPossibleGPA, "0.3f"), "\n")
