@@ -10,29 +10,31 @@
 import random
 # for press any key prompt using system commands(MAC OS / Linux)
 import os
-
+# to time how long burute for decryption takes
+import time
 # the plaintext secret message
 printMsg = "Plaintext secret message:"
 pageBreak = "---------------------------------------------------"
-strMsg = "The Courier is En Route with the Documents"
-print(pageBreak); print(printMsg, "\n"); print(strMsg, "\n"); print(pageBreak)
+strMsg = "The Courier is En Route with the Document"
+#strMsg = "The Couriers"
+print(); print(pageBreak); print(printMsg, "\n"); print(strMsg, "\n"); print(pageBreak)
 
 # convert the plaintext to lower case
 printMsg = "Lowercase secret message:"
-strMsg = strMsg.lower()
-print(printMsg, "\n"); print(strMsg, "\n"); print(pageBreak)
+strMsgLowerCase = strMsg.lower()
+print(printMsg, "\n"); print(strMsgLowerCase, "\n"); print(pageBreak)
 
 # replace any spaces in the message with an "x"
 printMsg = "Spaces in the secret message replaced with an 'x':"
-strMsg = strMsg.replace(" ", "x")
-print(printMsg, "\n"); print(strMsg, "\n"); print(pageBreak)
+strMsgLowerCaseNoSpaces = strMsgLowerCase.replace(" ", "x")
+print(printMsg, "\n"); print(strMsgLowerCaseNoSpaces, "\n"); print(pageBreak)
 
 # declare a one - dimensional list
 # populate the list with the characters comprising the message
 printMsg = "List with characters comprising of the secrete message:"
 plainTxtList = []
 # append the characters
-for char in strMsg:
+for char in strMsgLowerCaseNoSpaces:
     plainTxtList.append(char)
 print(printMsg, "\n"); print(plainTxtList, "\n"); print(pageBreak)
 
@@ -50,28 +52,49 @@ print(printMsg, len(scrambledList), "\n"); print(pageBreak)
 
 # print in blocks of seven letters per row
 printMsg = "Cipher Text:"
-print(printMsg, "\n")
 cipherTextLine = ""
 cipherTextList = []
+print(printMsg, "\n");
 for index in range(len(scrambledList)):
     cipherTextLine += scrambledList.pop(0)
     if len(cipherTextLine) == 7:
       print(cipherTextLine)
       cipherTextList.append(cipherTextLine)
       cipherTextLine = ""
-print(pageBreak)
-
+cipherTextList.append(cipherTextLine)
+print(cipherTextLine, "\n"); print(pageBreak)
 # ask the user to press any key to continue
 os.system('read -s -n 1 -p "Press any key to continue..."')
 print()
 
-# attempt to decipher the encrypted message
-wordCount = 1
-
+####### attempt to decipher the encrypted message ########
+# convert cipher to string and replace x's with spaces
+cipherTextString = ""
 for line in cipherTextList:
-  wordCount += line.count('x')
-  line = line.replace("x", " ")
-  print(line)
-print(wordCount)
+    line = line.replace("x", " ")
+    cipherTextString += line
+printMsg = "Cipher text string:"
+pageBreak = "---------------------------------------------------"
+print(pageBreak); print(printMsg, "\n"); print(cipherTextString, "\n"); print(pageBreak)
+cipherTextStringShuffle = ''
 
-print(cipherTextList)
+# start = time.perf_counter()
+# while cipherTextStringShuffle != strMsgLowerCase:
+#     del cipherTextStringShuffle
+#     cipherTextStringShuffle = ''.join(random.sample(cipherTextString, len(cipherTextString)))
+#     # print(cipherTextStringShuffle)
+# finish = time.perf_counter()
+# print("You in decrypted in ", round(finish-start, 3), ' seconds')
+
+start = time.perf_counter()
+cipherTextStringLength = len(cipherTextString)
+charMatched = 0
+decryptedMessage = ''
+for i in range(cipherTextStringLength):
+    for j in range(cipherTextStringLength):
+        if strMsgLowerCase[i] == cipherTextString[j]:
+            decryptedMessage += cipherTextString[j]
+            break
+finish = time.perf_counter()
+print("You decrypted the message:", "\n"); print(decryptedMessage, "\n")
+print("in", round(finish-start, 4), ' seconds'); print(pageBreak, "\n")
