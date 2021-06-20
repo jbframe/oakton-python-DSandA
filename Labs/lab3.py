@@ -1,8 +1,7 @@
-# Name: John Frame
-# Student Number: B02291550
-# Date: 6/16/2021
-# Lab Number: 3
-# Course: CSC 242 Python Data Structures
+print("""
+Name: John Frame, Student Number: B02291550, Date: 6/19/2021
+Lab Number: 2, Course: CSC 242 Python Data Structures
+""")
 # ---------------------------------------------------#
 # Babylonian Method
 # Programmer: Sammy Student
