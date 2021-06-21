@@ -77,13 +77,13 @@ pageBreak = "---------------------------------------------------"
 print(pageBreak); print(printMsg, "\n"); print(cipherTextString, "\n"); print(pageBreak)
 cipherTextStringShuffle = ''
 
-# start = time.perf_counter()
-# while cipherTextStringShuffle != strMsgLowerCase:
-#     del cipherTextStringShuffle
-#     cipherTextStringShuffle = ''.join(random.sample(cipherTextString, len(cipherTextString)))
-#     # print(cipherTextStringShuffle)
-# finish = time.perf_counter()
-# print("You in decrypted in ", round(finish-start, 3), ' seconds')
+start = time.perf_counter()
+while cipherTextStringShuffle != strMsgLowerCase:
+    del cipherTextStringShuffle
+    cipherTextStringShuffle = ''.join(random.sample(cipherTextString, len(cipherTextString)))
+    # print(cipherTextStringShuffle)
+finish = time.perf_counter()
+print("You in decrypted in ", round(finish-start, 3), ' seconds')
 
 start = time.perf_counter()
 cipherTextStringLength = len(cipherTextString)
