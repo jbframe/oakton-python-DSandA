@@ -65,3 +65,35 @@ print(cipherTextLine, "\n"); print(pageBreak)
 # ask the user to press any key to continue
 os.system('read -s -n 1 -p "Press any key to continue..."')
 print()
+
+####### attempt to decipher the encrypted message ########
+# convert cipher to string and replace x's with spaces
+cipherTextString = ""
+for line in cipherTextList:
+    line = line.replace("x", " ")
+    cipherTextString += line
+printMsg = "Cipher text string:"
+pageBreak = "---------------------------------------------------"
+print(pageBreak); print(printMsg, "\n"); print(cipherTextString, "\n"); print(pageBreak)
+cipherTextStringShuffle = ''
+
+start = time.perf_counter()
+while cipherTextStringShuffle != strMsgLowerCase:
+    del cipherTextStringShuffle
+    cipherTextStringShuffle = ''.join(random.sample(cipherTextString, len(cipherTextString)))
+    # print(cipherTextStringShuffle)
+finish = time.perf_counter()
+print("You in decrypted in ", round(finish-start, 3), ' seconds')
+
+start = time.perf_counter()
+cipherTextStringLength = len(cipherTextString)
+charMatched = 0
+decryptedMessage = ''
+for i in range(cipherTextStringLength):
+    for j in range(cipherTextStringLength):
+        if strMsgLowerCase[i] == cipherTextString[j]:
+            decryptedMessage += cipherTextString[j]
+            break
+finish = time.perf_counter()
+print("You decrypted the message:", "\n"); print(decryptedMessage, "\n")
+print("in", round(finish-start, 4), ' seconds'); print(pageBreak, "\n")
