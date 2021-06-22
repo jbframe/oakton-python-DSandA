@@ -15,7 +15,6 @@ import time
 printMsg = "Plaintext secret message:"
 pageBreak = "---------------------------------------------------"
 strMsg = "The Courier is En Route with the Document"
-#strMsg = "The Couriers"
 print(); print(pageBreak); print(printMsg, "\n"); print(strMsg, "\n"); print(pageBreak)
 
 # convert the plaintext to lower case
@@ -77,14 +76,8 @@ pageBreak = "---------------------------------------------------"
 print(pageBreak); print(printMsg, "\n"); print(cipherTextString, "\n"); print(pageBreak)
 cipherTextStringShuffle = ''
 
-start = time.perf_counter()
-while cipherTextStringShuffle != strMsgLowerCase:
-    del cipherTextStringShuffle
-    cipherTextStringShuffle = ''.join(random.sample(cipherTextString, len(cipherTextString)))
-    # print(cipherTextStringShuffle)
-finish = time.perf_counter()
-print("You in decrypted in ", round(finish-start, 3), ' seconds')
 
+### DECRYPTION SCHEME IF WE CAN CHECK AFTER GUSSING EACH CHARACTER ##
 start = time.perf_counter()
 cipherTextStringLength = len(cipherTextString)
 charMatched = 0
@@ -95,5 +88,15 @@ for i in range(cipherTextStringLength):
             decryptedMessage += cipherTextString[j]
             break
 finish = time.perf_counter()
-print("You decrypted the message:", "\n"); print(decryptedMessage, "\n")
+print("You decrypted the message CHARACTER BY CHARACTER:", "\n"); print(decryptedMessage, "\n")
+print("in", round(finish-start, 4), ' seconds'); print(pageBreak, "\n")
+
+### DECRYPTION SCHEME TO RANDOMLY GUESS ENTIRE STRING ##
+start = time.perf_counter()
+while cipherTextStringShuffle != strMsgLowerCase:
+    del cipherTextStringShuffle
+    cipherTextStringShuffle = ''.join(random.sample(cipherTextString, len(cipherTextString)))
+    # print(cipherTextStringShuffle)
+finish = time.perf_counter()
+print("You RANDOMLY decrypted the message:", "\n"); print(decryptedMessage, "\n")
 print("in", round(finish-start, 4), ' seconds'); print(pageBreak, "\n")

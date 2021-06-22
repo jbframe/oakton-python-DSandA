@@ -15,7 +15,6 @@ import time
 printMsg = "Plaintext secret message:"
 pageBreak = "---------------------------------------------------"
 strMsg = "The Courier is En Route with the Document"
-#strMsg = "The Couriers"
 print(); print(pageBreak); print(printMsg, "\n"); print(strMsg, "\n"); print(pageBreak)
 
 # convert the plaintext to lower case
