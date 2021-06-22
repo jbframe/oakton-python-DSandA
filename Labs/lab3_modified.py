@@ -21,6 +21,7 @@ def Babylonian(number):
     y = (y + x / y) / 2
     # (4) if y ^ 2 is not close enough to x , then repeat step (3)
     ySquared = y**2
+    print('y', y, 'ySquared', ySquared, 'diff' , abs(x - ySquared))
     if ySquared - x < e:
     # (5) return y , as the square root of x
       return y
