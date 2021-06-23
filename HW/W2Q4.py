@@ -6,6 +6,9 @@ y = 0
 z = 0
 
 for x in range(3, 7):
-		if (y > z ) :
-				z, y = y, z
+	if (y > z):
+		z, y = y, z
 	y = y + x
+print(f"""
+x: {x} \ty: {y} \tz: {z}
+""")

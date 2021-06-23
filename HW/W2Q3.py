@@ -4,7 +4,9 @@
 
 sum = 0
 for value in range(1, 4) :
-		if (value == 2) :
+		if (value != 2):
 				sum = sum**2
 				sum += value
-	print (sum)
+print (f"""
+{sum}
+""") # expected output: 4
