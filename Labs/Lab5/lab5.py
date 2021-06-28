@@ -226,10 +226,12 @@ def listInput():
     # populate the list in sort entry order
     for i in range(n) :
         userList.append(int(input("Enter %dth element: " % i)))
-    # optionally pad with leading 0's to increase complexity
-    for i in range(10000) :
-        userList.insert(0, 0)
-    n += 10000
-    SelectRoutine()
 
+    # ---optionally pad with leading 0's to increase complexity----------- #
+    # print("Padded with 10000 leading 0's")
+    # for i in range(10000) :
+    #     userList.insert(0, 0)
+    # n += 10000
+    # ---------------------------------------------------------------------#
+    SelectRoutine()
 listInput()
