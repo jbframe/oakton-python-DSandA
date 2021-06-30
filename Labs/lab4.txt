@@ -1,7 +1,0 @@
-1/ What is meant by a transposition cipher?
-
-2/ What if we took the plaintext and split it into two separate lists.  Then, we can reverse the two lists and concatenate the resulting lists.  Would this be a good way to disguise your plaintext message?  Explain your answer.
-
-3/ What if we did not randomly scramble the plaintext characters but instead simply perform what is known as a Caesar shift?  Would this be a more secure method of encryption?
-
-4/ How about using the list sort() method for concealing a message?  Would that be a good idea?(5)What have you learned from performing and coding for this lab assignment?
