@@ -5,28 +5,7 @@ Lab # & Name: 8 - Classes: Deep Learning (Text & Sequences) - The Movie Script
 Course: CSC 242 Python Data Structures
 ---------------------------------------------------------------------------
 """)
-
-class MovieScript(object) :
-    # begin the class definition
-
-    # declare a data element as a list
-    script = []
-
-    # the class constructor
-    def __init__(self) :
-        # pass
-        print ("a class object has been constructed\n")
-
-    # a class member function
-    def getScript(self) :
-        return self.script
-
-    # a class member function
-    def setScript(self, s) :
-        script = s
-
-    # end the class definition
-
+import MovieScript
 
 # the movie text and sequences
 seq = []
@@ -52,3 +31,7 @@ theScript = ms.getScript()
 for x in range(len(theScript)) :
     print (u"\u2022", theScript[x], end = "\n")
 print ("\n")
+
+print ("please enter a keyword to search the movie sequences")
+print ("\n")
+keyword = input().strip()
