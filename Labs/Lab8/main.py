@@ -1,3 +1,6 @@
+from os import system
+system("clear")
+
 print("""
 --------------------------------Remarks------------------------------------
 Name: John Frame, Student Number: B02291550, Date: 7/3/2021
@@ -5,7 +8,8 @@ Lab # & Name: 8 - Classes: Deep Learning (Text & Sequences) - The Movie Script
 Course: CSC 242 Python Data Structures
 ---------------------------------------------------------------------------
 """)
-import MovieScript
+
+from MovieScript.MovieScript import MovieScript
 
 # the movie text and sequences
 seq = []
