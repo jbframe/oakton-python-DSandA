@@ -8,8 +8,8 @@ Lab # & Name: 8 - Classes: Deep Learning (Text & Sequences) - The Movie Script
 Course: CSC 242 Python Data Structures
 ---------------------------------------------------------------------------
 """)
-
 from MovieScript.MovieScript import MovieScript
+
 
 # the movie text and sequences
 seq = []
