@@ -36,6 +36,5 @@ for x in range(len(theScript)) :
     print (u"\u2022", theScript[x], end = "\n")
 print ("\n")
 
-# print ("please enter a keyword to search the movie sequences")
-# print ("\n")
-# keyword = input().strip()
+ms.search(seq)
+
