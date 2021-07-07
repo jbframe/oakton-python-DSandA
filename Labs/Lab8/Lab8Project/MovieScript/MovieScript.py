@@ -9,9 +9,9 @@ class MovieScript(object) :
     segmentLength = []
 
     # the class constructor
-    def __init__(self) :
-        # pass
-        print ("a class object has been constructed\n")
+    # def __init__(self) :
+    #     # pass
+    #     print ("a class object has been constructed\n")
 
     # a class member function
     def getScript(self) :
