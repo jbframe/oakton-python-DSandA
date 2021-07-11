@@ -19,3 +19,18 @@ print ("\n")
 print (sortedList)
 print ("\n\n")
 
+ # list implementation of a Stack
+ myStack = []
+ for item in (10, 20, 30, 40) :
+    myStack.append(item)
+print("The elements in the stack.")
+print(myStack)
+print ("note: stack treated as a list")
+print (type(myStack))
+# elements that are popped
+# # can be tracked by printing them
+print("\nthe elements that were popped are:")
+print (myStack.pop())
+print (myStack.pop())
+print ("\nThe Stack after the elements are popped.")
+print (myStack)
