@@ -1,2 +1,3 @@
-import keyword
-print (keyword.kwlist)
+x = 5
+
+print(5 and True)
