@@ -1,3 +1,11 @@
+print("""
+--------------------------------Remarks------------------------------------
+Name: John Frame, Student Number: B02291550, Date: 7/3/2021
+Lab # & Name: 7 - Classes and Interfaces: A Bag Data Structure
+Course: CSC 242 Python Data Structures
+---------------------------------------------------------------------------
+""")
+
 import random
 # randomly select an item within a list of elements
 myList1 = ["me", "you", "him", "her", "it"]
