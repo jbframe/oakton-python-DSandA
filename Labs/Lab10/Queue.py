@@ -15,4 +15,4 @@ classQueue() :
 
     # display the current queue
     def display(self) :
-        print(self.queue
+        print(self.queue)
