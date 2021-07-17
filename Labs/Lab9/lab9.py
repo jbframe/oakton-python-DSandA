@@ -1,7 +1,7 @@
 print("""
 --------------------------------Remarks------------------------------------
-Name: John Frame, Student Number: B02291550, Date: 7/3/2021
-Lab # & Name: 7 - Classes and Interfaces: A Bag Data Structure
+Name: John Frame, Student Number: B02291550, Date: 7/10/2021
+Lab # & Name: 9 - Stacks and The Writer's Block
 Course: CSC 242 Python Data Structures
 ---------------------------------------------------------------------------
 """)
