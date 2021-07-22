@@ -44,4 +44,3 @@ print ("\nThe Stack after the elements are popped.")
 print (myStack)
 
 
-
