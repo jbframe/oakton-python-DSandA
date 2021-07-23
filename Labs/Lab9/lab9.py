@@ -6,6 +6,33 @@ Course: CSC 242 Python Data Structures
 ---------------------------------------------------------------------------
 """)
 
+# # write data to a file
+# try :
+#     f = open("data.txt", "w", encoding = "utf-8")
+#     # perform file operations
+#     # first line
+#     f.write("the first line\n")
+#     # second line
+#     f.write("the second line\n")
+#     # third line
+#     f.write("the third line\n")
+# finally :
+#     f.close()
+
+# # read data from a file
+# try :
+#     data = []
+#     f = open("data.csv", "r", encoding = "utf-8")
+#     content = f.read().splitlines()
+#     # perform file operations
+#     for line in content :
+#         print (line)
+#         data.append(line)
+#         print (data)
+# finally :
+#     f.close()
+#     print (data)
+
 import random
 # randomly select an item within a list of elements
 myList1 = ["me", "you", "him", "her", "it"]
@@ -28,8 +55,8 @@ print (sortedList)
 print ("\n\n")
 
  # list implementation of a Stack
- myStack = []
- for item in (10, 20, 30, 40) :
+myStack = []
+for item in (10, 20, 30, 40) :
     myStack.append(item)
 print("The elements in the stack.")
 print(myStack)
