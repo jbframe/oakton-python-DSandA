@@ -51,3 +51,4 @@ print ("estimated entropy for grid line 2:",  entropy)
 total_entropy += entropy
 print ("total entropy :",  total_entropy)
 print ("\n\n")
+
