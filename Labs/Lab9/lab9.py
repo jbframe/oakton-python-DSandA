@@ -22,7 +22,7 @@ with open ('data.csv', 'r') as csvfile:
 
 # randomly select a subset of elements ( the stack )
 samples = random.sample(grid, 6)
-# print (samples)
+print (samples, grid)
 print ("[ the script ]")
 print("")
 print ("I started the day by looking for the", samples.pop(), end = ".")
@@ -39,16 +39,14 @@ print ("Yesterday, I forgot to take the", samples.pop(), "to the meeting", end =
 print ("\n\n")
 
 total_entropy = 0
+numbeOfLines = 6
+
 print ("\n")
 print ("please enter an integer 0-5 that will describe the entropy analysis")
-print ("for grid line 1")
-entropy = int(input())
-total_entropy += entropy
-print ("estimated entropy for grid line 1:", entropy)
-print ("for grid line 2")
-entropy = int(input())
-print ("estimated entropy for grid line 2:",  entropy)
-total_entropy += entropy
+for i in range(1, numbeOfLines + 1):
+    print ("for grid line " + str(i) + ":")
+    entropy = int(input())
+    total_entropy += entropy
+    print ("estimated entropy for grid line " + str(i) + ":", entropy)
 print ("total entropy :",  total_entropy)
 print ("\n\n")
-
