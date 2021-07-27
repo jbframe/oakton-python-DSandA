@@ -19,9 +19,9 @@ with open ('data.csv', 'r') as csvfile:
         for i in row:
             grid.append(i)
 
-
 # randomly select a subset of elements ( the stack )
 numbeOfLines = 0
+total_entropy = 0
 samples = random.sample(grid, 6)
 print (samples, grid)
 print ("[ the script ]")
@@ -44,9 +44,6 @@ print ()
 print ("Yesterday, I forgot to take the", samples.pop(), "to the meeting", end = ".")
 numbeOfLines += 1
 print ("\n\n")
-
-total_entropy = 0
-
 
 print ("\n")
 print ("please enter an integer 0-5 that will describe the entropy analysis")
