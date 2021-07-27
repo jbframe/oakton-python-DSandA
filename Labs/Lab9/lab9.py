@@ -45,7 +45,7 @@ print ("Yesterday, I forgot to take the", samples.pop(), "to the meeting", end =
 numbeOfLines += 1
 print ("\n\n")
 
-print ("\n")
+# ask the user for a to enter the entropy
 print ("please enter an integer 0-5 that will describe the entropy analysis")
 for i in range(1, numbeOfLines + 1):
     print ("for grid line " + str(i) + ":")
