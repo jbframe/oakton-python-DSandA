@@ -23,7 +23,7 @@ with open ('data.csv', 'r') as csvfile:
 numbeOfLines = 0
 total_entropy = 0
 samples = random.sample(grid, 6)
-print (samples, grid)
+# print (samples, grid)
 print ("[ the script ]")
 print("")
 print ("I started the day by looking for the", samples.pop(), end = ".")
