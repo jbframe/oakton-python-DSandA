@@ -1,3 +1,14 @@
+from os import system
+system("clear")
+
+print("""
+--------------------------------Remarks------------------------------------
+Name: John Frame, Student Number: B02291550, Date: 7/10/2021
+Lab # & Name: 10 - Simulating a Customer Queue at the Local Drive - Through
+Course: CSC 242 Python Data Structures
+---------------------------------------------------------------------------
+""")
+
 #  filename: Queue.py
 classQueue() :
     # construct the list to implement the queue
