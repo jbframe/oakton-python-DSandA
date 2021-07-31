@@ -1,5 +1,5 @@
-#  filename: Queue.py
 class Queue() :
+
     # construct the list to implement the queue
     def __init__(self) :
         self.queue = []
@@ -11,8 +11,13 @@ class Queue() :
     # remove an element from the queue
     def dequeue(self) :
         if (len(self.queue) < 1) :
-          returnNonereturnself.queue.pop(0)
+            return None
+        return self.queue.pop(0)
 
     # display the current queue
     def display(self) :
         print(self.queue)
+
+    # return the size of the queue
+    def size(self) :
+        return len(self.queue)
