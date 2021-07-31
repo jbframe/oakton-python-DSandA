@@ -12,7 +12,9 @@ class Queue() :
     def dequeue(self) :
         if (len(self.queue) < 1) :
             return None
-        return self.queue.pop(0)
+        customer = self.queue.pop(0)
+        print(customer + " is now being served.")
+        return customer
 
     # display the current queue
     def display(self) :
