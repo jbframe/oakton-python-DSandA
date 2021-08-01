@@ -20,6 +20,10 @@ class Queue() :
     def display(self) :
         print(self.queue)
 
+    # return the current queue
+    def returnQueue(self) :
+        return self.queue
+
     # return the size of the queue
     def size(self) :
         return len(self.queue)
