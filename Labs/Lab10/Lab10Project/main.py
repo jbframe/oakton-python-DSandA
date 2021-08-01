@@ -9,9 +9,10 @@ Course: CSC 242 Python Data Structures
 ---------------------------------------------------------------------------
 """)
 from Queue.Queue import Queue
-
+from PQ.PQ import PQ
 # instantiate a class object
 q = Queue()
+pq = PQ()
 # object uses methods of the class
 q.enqueue("Customer 1")
 q.enqueue("Doordash Customer 2")
