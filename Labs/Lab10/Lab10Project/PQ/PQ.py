@@ -46,7 +46,6 @@ class PQ() :
                     continue
             # if customer is in not in the priority queue
             else :
-                self.pq[indexToSync] = []
-                self.pq[indexToSync].append(input("What is the priority of " + i + "? "))
-                self.pq[indexToSync].append(i)
+                self.pq[indexToSync][0] = input("What is the priority of " + i + "? ")
+                self.pq[indexToSync][1] = i
                 indexToSync += 1
