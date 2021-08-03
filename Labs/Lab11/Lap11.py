@@ -47,15 +47,16 @@ class Singly_linked_list :
             self.head = node
             self.tail = node
         self.count += 1
-        return data
+        return self.tail.data
 
     def removeTail(self) :
         # remove the tail of the list
-        if self.head.data == None :
+        if self.head == None :
             return "Empty"
         if self.head.next == None :
             lastItem = self.head.data
-            self.head.data = None
+            self.head = None
+            self.tail = None
             self.count -= 1
             return lastItem
         secondLastItem = self.head
@@ -88,7 +89,6 @@ class Stack :
         return print("Stack size: " + str(self.stack.count))
 
 
-
 stack = Stack()
 stack.push("item 1")
 stack.size()
@@ -111,3 +111,29 @@ stack.pop()
 stack.pop()
 stack.size()
 stack.pop()
+
+
+import datetime
+tStamp1 = datetime.datetime.now()
+for i in range(1, 1000) :
+    stack.push(i)
+for i in range(1, 1000) :
+    stack.pop()
+stack.size()
+tStamp2 = datetime.datetime.now()
+delta = tStamp2 - tStamp1
+intervalStack = str(int(delta.total_seconds() * 1000))
+
+
+tStamp1 = datetime.datetime.now()
+list = []
+for i in range(1, 1000) :
+    print(list.append(i))
+for i in range(1, 1000) :
+    print(list.pop())
+print(len(list))
+tStamp2 = datetime.datetime.now()
+delta = tStamp2 - tStamp1
+interval = str(int(delta.total_seconds() * 1000))
+print ("completed linked stack in " + intervalStack + " milliseconds")
+print ("completed list in " + interval + " milliseconds")
